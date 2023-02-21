@@ -3,4 +3,4 @@
 ![image](https://user-images.githubusercontent.com/32292295/220283665-1ebde25d-f5d5-4652-80dc-b6dcb8bfe5f1.png)
 
 TODO
-- ~~TO implement removing the UNREAD label~~ and marking them auto replied functionality. Rest all tasks done.
+- ~~TO implement removing the UNREAD label~~ and marking ~~them auto replied~~ functionality. Rest all tasks done.

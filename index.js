@@ -93,7 +93,7 @@ async function autoReplySyncher(auth) {
     let messages = (res.data.messages);
     messages.forEach(message => {
         gmail.users.messages.get({ auth: auth, userId: 'me', id: message.id }, callbackForEachMessage)
-        gmail.users.messages.modify({auth: auth, userId: 'me', id: message.id,requestBody:{ "removeLabelIds": [
+        gmail.users.messages.modify({auth: auth, userId: 'me', id: message.id,requestBody:{ addLabelIds:['Label_62705540091235948'],"removeLabelIds": [
             'UNREAD'
           ]} })
     })
