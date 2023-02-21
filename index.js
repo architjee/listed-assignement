@@ -93,6 +93,9 @@ async function autoReplySyncher(auth) {
     let messages = (res.data.messages);
     messages.forEach(message => {
         gmail.users.messages.get({ auth: auth, userId: 'me', id: message.id }, callbackForEachMessage)
+        gmail.users.messages.modify({auth: auth, userId: 'me', id: message.id,requestBody:{ "removeLabelIds": [
+            'UNREAD'
+          ]} })
     })
     function handleReply(toParty, threadId){
         console.log('Handling reply to ', toParty ,'@ following threadId', threadId)
