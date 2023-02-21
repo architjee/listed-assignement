@@ -164,3 +164,10 @@ This is a single email message
 
 
 /// RAW MESSAGE LOOKS LIKE This
+From: Archit Jain <architjee@gmail.com> 
+To: ${toParty}
+Subject: Out of office 
+Date: Tue, 21 Feb 2023 09:55:06 -0600 
+Message-ID: <1234@local.machine.example>
+
+The author is out of office.
