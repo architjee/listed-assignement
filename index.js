@@ -96,6 +96,7 @@ async function autoReplySyncher(auth) {
     })
     function handleReply(toParty, threadId){
         console.log('Handling reply to ', toParty ,'@ following threadId', threadId)
+        gmail.users.messages.send({userId: 'me'})
     }
     function callbackForEachMessage(err, res) {
         if (!err) {
