@@ -1,0 +1,160 @@
+We are getting the following response 
+
+This is the unread email
+{
+  id: '18672914af843fca',
+  threadId: '18672899081198c1',
+  labelIds: [ 'UNREAD', 'IMPORTANT', 'CATEGORY_UPDATES', 'INBOX' ],
+  snippet: 'Google APIs Explorer was granted access to your Google Account a
+rchitjee@gmail.com If you did not grant access, you should check this activi
+ty and secure your account. Check activity You can also see',
+  payload: {
+    partId: '',
+    mimeType: 'multipart/alternative',
+    filename: '',
+    headers: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    body: { size: 0 },
+    parts: [ [Object], [Object] ]
+  },
+  sizeEstimate: 11784,
+  historyId: '2605963',
+  internalDate: '1676959369000'
+}
+This is the unread email
+{
+  id: '1867235a64a3bd33',
+  threadId: '1867235a64a3bd33',
+  labelIds: [ 'UNREAD', 'IMPORTANT', 'CATEGORY_UPDATES', 'INBOX' ],
+  snippet: 'Explore this week on GitHub GitHub security alert digest architj
+ee&#39;s repository security updates from the week of Feb 14 - Feb 21 Depend
+abot alerts permission change You can now view, dismiss, and',
+  payload: {
+    partId: '',
+    mimeType: 'multipart/alternative',
+    filename: '',
+    headers: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object]
+    ],
+    body: { size: 0 },
+    parts: [ [Object], [Object] ]
+  },
+  sizeEstimate: 57311,
+  historyId: '2605720',
+  internalDate: '1676953361000'
+}
+This is the unread email
+{
+  id: '18672ac278ebcd81',
+  threadId: '18672ac278ebcd81',
+  labelIds: [ 'CATEGORY_PROMOTIONS', 'UNREAD', 'IMPORTANT', 'INBOX' ],      
+  snippet: 'Hi Archit, Don&#39;t you want to kick the competition that&#39;s
+ in line when you getting interviewed at a job that pays the big bucks? A lo
+t of other candidates will have programming skills just like',
+  payload: {
+    partId: '',
+    mimeType: 'multipart/alternative',
+    filename: '',
+    headers: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    body: { size: 0 },
+    parts: [ [Object], [Object] ]
+  },
+  sizeEstimate: 12780,
+  historyId: '2605975',
+  internalDate: '1676961129000'
+}
+
+// After filtering out response for single message thread.
+his is the unread email
+This is a single email message
+{
+  id: '18672ac278ebcd81',
+  threadId: '18672ac278ebcd81',
+  labelIds: [ 'CATEGORY_PROMOTIONS', 'UNREAD', 'IMPORTANT', 'INBOX' ],
+  snippet: 'Hi Archit, Don&#39;t you want to kick the competition that&#39;s in line when you getting interviewed at a job that pays the big bucks? A lot of other candidates will have programming skills just like',
+  payload: {
+    partId: '',
+    mimeType: 'multipart/alternative',
+    filename: '',
+    headers: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    body: { size: 0 },
+    parts: [ [Object], [Object] ]
+  },
+  sizeEstimate: 12780,
+  historyId: '2606052',
+  internalDate: '1676961129000'
+}
+This is the unread email
+This is a single email message
+{
+  id: '1867235a64a3bd33',
+  threadId: '1867235a64a3bd33',
+  labelIds: [ 'UNREAD', 'IMPORTANT', 'CATEGORY_UPDATES', 'INBOX' ],
+  snippet: 'Explore this week on GitHub GitHub security alert digest architjee&#39;s repository security updates from the week of Feb 14 - Feb 21 Dependabot alerts permission change You can now view, dismiss, and',
+  payload: {
+    partId: '',
+    mimeType: 'multipart/alternative',
+    filename: '',
+    headers: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object]
+    ],
+    body: { size: 0 },
+    parts: [ [Object], [Object] ]
+  },
+  sizeEstimate: 57311,
+  historyId: '2605720',
+  internalDate: '1676953361000'
+}

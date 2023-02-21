@@ -90,11 +90,40 @@ async function autoReplySyncher(auth) {
     const res = await gmail.users.messages.list({
         userId: 'me',
     });
-    console.log(res);
+    let messages = (res.data.messages);
+    messages.forEach(message => {
+        gmail.users.messages.get({ auth: auth, userId: 'me', id: message.id }, callbackForEachMessage)
+    })
+    function handleReply(toParty, threadId){
+        console.log('Handling reply to ', toParty ,'@ following threadId', threadId)
+    }
+    function callbackForEachMessage(err, res) {
+        if (!err) {
+            let message = res.data;
+            message.labelIds.forEach(label => {
+                if (label == 'UNREAD' && message.labelIds.indexOf('INBOX') > -1) {
+                    console.log('This is the unread email')
+                    if (message.id == message.threadId) {
+                        console.log('This is a single email message')
+                        let headers = message.payload.headers;
+                        headers.forEach(header => {
+                            if (header.name == "From") {
+                                console.log(header.value, message.threadId)
+                                const toParty = header.value;
+                                const threadId = message.threadId;
+                                handleReply(toParty, threadId)
+                            }
+                        })
+                    }
+                }
+            })
+
+        }
+    }
 }
 
-setInterval(main, 900);
+setInterval(main, 9000);
 function main() {
-    authorize().then(autoReplySyncher).catch(console.error);
-    
+    console.log('Syncher running.')
 }
+authorize().then(autoReplySyncher).catch(console.error);
