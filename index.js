@@ -5,7 +5,7 @@ const { authenticate } = require('@google-cloud/local-auth');
 const { google } = require('googleapis');
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
+const SCOPES = ['https://mail.google.com/'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
@@ -96,20 +96,28 @@ async function autoReplySyncher(auth) {
     })
     function handleReply(toParty, threadId){
         console.log('Handling reply to ', toParty ,'@ following threadId', threadId)
-        gmail.users.messages.send({userId: 'me'})
+        console.log(Buffer.from(genereateRawMessage(toParty)).toString('base64') )
+
+        try {
+            gmail.users.messages.send({auth: auth, userId: 'me', requestBody:{
+                raw: Buffer.from(genereateRawMessage(toParty)).toString('base64') }})
+        } catch (error) {
+            
+        }
+       
     }
     function callbackForEachMessage(err, res) {
         if (!err) {
             let message = res.data;
             message.labelIds.forEach(label => {
                 if (label == 'UNREAD' && message.labelIds.indexOf('INBOX') > -1) {
-                    console.log('This is the unread email')
+                    // console.log('This is the unread email')
                     if (message.id == message.threadId) {
-                        console.log('This is a single email message')
+                        // console.log('This is a single email message')
                         let headers = message.payload.headers;
                         headers.forEach(header => {
                             if (header.name == "From") {
-                                console.log(header.value, message.threadId)
+                                // console.log(header.value, message.threadId)
                                 const toParty = header.value;
                                 const threadId = message.threadId;
                                 handleReply(toParty, threadId)
@@ -125,6 +133,16 @@ async function autoReplySyncher(auth) {
 
 setInterval(main, 9000);
 function main() {
+    authorize().then(autoReplySyncher).catch(console.error);
     console.log('Syncher running.')
 }
-authorize().then(autoReplySyncher).catch(console.error);
+function genereateRawMessage(toSender){
+    let messageBody = `From: Archit Jain <architjee@gmail.com> 
+To: ${toSender} 
+Subject: Out of office 
+Date: Tue, 21 Feb 2023 09:55:06 -0600 
+Message-ID: <1234@local.machine.example>
+
+The author is out of office.`
+    return messageBody
+}

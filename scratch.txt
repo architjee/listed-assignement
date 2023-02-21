@@ -158,3 +158,9 @@ This is a single email message
   historyId: '2605720',
   internalDate: '1676953361000'
 }
+
+// payload from me to me
+, raw: "RnJvbTogQXJjaGl0IEphaW4gPGFyY2hpdGplZUBnbWFpbC5jb20+IApUbzogQXJjaGl0IEphaW4gPGFyY2hpdGplZUBnbWFpbC5jb20+IApTdWJqZWN0OiBTYXlpbmcgSGVsbG8gCkRhdGU6IEZyaSwgMjEgTm92IDE5OTcgMDk6NTU6MDYgLTA2MDAgCk1lc3NhZ2UtSUQ6IDwxMjM0QGxvY2FsLm1hY2hpbmUuZXhhbXBsZT4KClRoaXMgaXMgYSBtZXNzYWdlIGp1c3QgdG8gc2F5IGhlbGxvLiBTbywgIkhlbGxvIi4="
+
+
+/// RAW MESSAGE LOOKS LIKE This
